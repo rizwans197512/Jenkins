@@ -15,13 +15,13 @@ pipeline {
 
                 }
 
+                stage('Deploy the stating enviromnet')
+                steps{
+                build job: 'eploy-Application-Staging-Env'
 
+            }
 
-
-                stage('Deploy the stating enviromnet'){
-
-                    build job: 'eploy-Application-Staging-Env'
-                }
+                  
             }
 
 
