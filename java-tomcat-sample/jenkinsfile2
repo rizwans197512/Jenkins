@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages{
+      stage('Init'){
+          steps{
+                echo 'Hi , this Rizwan For London'
+                echo ' We are Testing Project'
+                      
+                }         
+                 }
+                 stage('Build'){
+                      steps{
+                        echo 'Maven Project'
+                 }
+                           
+                 }
+                 
+                 stage('Deploy'){
+                 steps{
+                    echo 'Here Deployment Area'
+                 }
+                 }
+           }
+           
+           
+           }
+           
