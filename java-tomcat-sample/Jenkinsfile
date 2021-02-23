@@ -13,7 +13,7 @@ pipeline {
                         archiveArtifacts artifacts '**/*.war'
                     }
 
-                }
+                }}
 
                 stage('Deploy the stating enviromnet')
                 steps{
