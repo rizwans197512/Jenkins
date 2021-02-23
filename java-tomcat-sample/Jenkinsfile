@@ -3,21 +3,27 @@ pipeline {
     agent any
     stages{
             stage('Bulid Application'){
-                steps {
+                steps{
 
-                    sh 'mvn -f  java-tomcat-sample/pom.xml clean package'
+                    sh 'mvn clean package'
                 }
-                post {
-                    success {
-                        echo "Now Archiving the Artifacts..."
-                        archiveArtifacts artifacts: '**/*.war'
+                post{
+                    success{
+                        echo "Now Arching the Artifacts"
+                        archiveArtifacts artifacts '**/*.war'
                     }
 
                 }
-                stage(' Deploy in staging Enviromnet'){
-                build job: 'eploy-Application-Staging-Env'
-                
+
+
+
+
+                stage('Deploy the stating enviromnet'){
+
+                    build job: 'eploy-Application-Staging-Env'
                 }
             }
+
+
     }
 }
