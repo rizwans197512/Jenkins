@@ -14,7 +14,7 @@ pipeline {
                     }
 
                 }
-                stages(' Deploy in staging Enviromnet'){
+                stage(' Deploy in staging Enviromnet'){
                 build job: 'eploy-Application-Staging-Env'
                 
                 }
