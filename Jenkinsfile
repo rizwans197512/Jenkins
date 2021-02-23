@@ -7,12 +7,7 @@ pipeline {
                         echo 'We are Starting the Testing'
                   }
             }
-            stage('Init') {
-                  steps {
-                        echo 'Hi, Hi this second stage fo initizle the state agine'
-                        echo 'We are Starting the Testing again'
-                  }
-            }
+            
             stage('Build') {
                   steps {
                         echo 'Building Sample Maven Project'
