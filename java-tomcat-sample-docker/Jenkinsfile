@@ -17,10 +17,7 @@ pipeline {
             agent any
             steps{
                 sh label: '', script: '''rm -rf dockerimg
-mkdir dockerimg
-cd dockerimg
-touch dockerfile
-cat <<EOT>>dockerfile
+
 FROM tomcat
 ADD **/*.war /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
